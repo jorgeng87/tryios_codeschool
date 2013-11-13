@@ -20,7 +20,7 @@
     
     UIView *colorView = [[UIView alloc] initWithFrame:viewRect];
     
-    colorView.backgroundColor = [UIColor yellowColor];
+    colorView.backgroundColor = [UIColor colorWithRed:0.462 green:0.749 blue:0.937 alpha:1.0];
     colorTouchVC.view = colorView;
     
     self.window.rootViewController = colorTouchVC;
