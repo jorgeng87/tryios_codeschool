@@ -35,6 +35,11 @@
     NSLog(@"Touch started");
 }
 
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    self.view.alpha = ((double)arc4random() / 0x100000000);
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
