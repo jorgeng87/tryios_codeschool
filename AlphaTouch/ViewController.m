@@ -27,12 +27,18 @@
     
     self.view = colorView;
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     button.frame = CGRectMake(100, 100, 100, 44);
     [button setTitle:@"Tap me!" forState:UIControlStateNormal];
     [button setTitle:@"Tapping" forState:UIControlStateHighlighted];
+    [button addTarget:self action:@selector(turnBlue:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:button];
+}
+
+- (void)turnBlue:(UIButton *)sender
+{
+   self.view.backgroundColor = [UIColor blueColor];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
