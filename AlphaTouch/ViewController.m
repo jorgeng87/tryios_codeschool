@@ -38,7 +38,8 @@
 
 - (void)turnBlue:(UIButton *)sender
 {
-   self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor blueColor];
+    [sender removeFromSuperview];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
