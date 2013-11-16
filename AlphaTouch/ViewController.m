@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 @property (strong, nonatomic) UIView *view;
+@property (strong, nonatomic) UIButton *turnBlue;
+@property (strong, nonatomic) UIButton *turnYellow;
 @end
 
 @implementation ViewController
@@ -27,24 +29,24 @@
     
     self.view = colorView;
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    button.frame = CGRectMake(100, 100, 100, 44);
-    [button setTitle:@"Turn Blue!" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(turnBlue:) forControlEvents:UIControlEventTouchUpInside];
+    self.turnBlue = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.turnBlue.frame = CGRectMake(100, 100, 100, 44);
+    [self.turnBlue setTitle:@"Turn Blue!" forState:UIControlStateNormal];
+    [self.turnBlue addTarget:self action:@selector(changeColor:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:button];
+    [self.view addSubview:self.turnBlue];
     
-    UIButton *second_button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    second_button.frame = CGRectMake(100, 300, 100, 44);
-    [second_button setTitle:@"Turn Yellow!" forState:UIControlStateNormal];
-    [second_button addTarget:self action:@selector(turnBlue:) forControlEvents:UIControlEventTouchUpInside];
+    self.turnYellow = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    self.turnYellow.frame = CGRectMake(100, 300, 100, 44);
+    [self.turnYellow setTitle:@"Turn Yellow!" forState:UIControlStateNormal];
+    [self.turnYellow addTarget:self action:@selector(changeColor:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:second_button];
+    [self.view addSubview:self.turnYellow];
 }
 
-- (void)turnBlue:(UIButton *)sender
+- (void)changeColor:(UIButton *)sender
 {
-    if ([sender.titleLabel.text isEqualToString:@"Turn Blue!"]) {
+    if ([sender isEqual:self.turnBlue]) {
         self.view.backgroundColor = [UIColor blueColor];
     } else {
         self.view.backgroundColor = [UIColor yellowColor];
