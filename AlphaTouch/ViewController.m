@@ -27,19 +27,28 @@
     
     self.view = colorView;
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.frame = CGRectMake(100, 100, 100, 44);
-    [button setTitle:@"Tap me!" forState:UIControlStateNormal];
-    [button setTitle:@"Tapping" forState:UIControlStateHighlighted];
+    [button setTitle:@"Turn Blue!" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(turnBlue:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:button];
+    
+    UIButton *second_button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    second_button.frame = CGRectMake(100, 300, 100, 44);
+    [second_button setTitle:@"Turn Yellow!" forState:UIControlStateNormal];
+    [second_button addTarget:self action:@selector(turnBlue:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:second_button];
 }
 
 - (void)turnBlue:(UIButton *)sender
 {
-    self.view.backgroundColor = [UIColor blueColor];
-    [sender removeFromSuperview];
+    if ([sender.titleLabel.text isEqualToString:@"Turn Blue!"]) {
+        self.view.backgroundColor = [UIColor blueColor];
+    } else {
+        self.view.backgroundColor = [UIColor yellowColor];
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
