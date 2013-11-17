@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "FavoritesViewController.h"
+#import "ProfileViewController.h"
+#import "FeedViewController.h"
 
 @implementation AppDelegate
 
@@ -17,8 +20,14 @@
     CGRect viewRect = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:viewRect];
     
-    self.viewController = [[ViewController alloc] init];
-    self.window.rootViewController = self.viewController;
+    self.tabBarViewController = [[UITabBarController alloc] init];
+    
+    FeedViewController *feedViewController = [[FeedViewController alloc] init];
+    ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
+    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
+    
+    [self.tabBarViewController setViewControllers:@[feedViewController,profileViewController,favoritesViewController]];
+    self.window.rootViewController = self.tabBarViewController;
     [self.window makeKeyAndVisible];
     
     return YES;
