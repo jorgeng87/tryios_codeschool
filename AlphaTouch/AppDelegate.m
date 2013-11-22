@@ -11,6 +11,7 @@
 #import "FavoritesViewController.h"
 #import "ProfileViewController.h"
 #import "FeedViewController.h"
+#import "FeedTableViewController.h"
 
 @implementation AppDelegate
 
@@ -22,11 +23,16 @@
     
     self.tabBarViewController = [[UITabBarController alloc] init];
     
+    FeedTableViewController *feedTableViewController = [[FeedTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    UINavigationController *feedNavController = [[UINavigationController alloc]
+                                                 initWithRootViewController:feedTableViewController];
+    
     FeedViewController *feedViewController = [[FeedViewController alloc] init];
     ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
     FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
     
-    [self.tabBarViewController setViewControllers:@[feedViewController,profileViewController,favoritesViewController]];
+    [self.tabBarViewController setViewControllers:@[feedNavController,profileViewController,favoritesViewController]];
     self.window.rootViewController = self.tabBarViewController;
     [self.window makeKeyAndVisible];
     
