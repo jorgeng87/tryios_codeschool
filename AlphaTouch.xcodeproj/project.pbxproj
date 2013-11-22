@@ -10,6 +10,7 @@
 		CF324284183834760024355F /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF324283183834760024355F /* FeedViewController.m */; };
 		CF324287183836190024355F /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF324286183836190024355F /* ProfileViewController.m */; };
 		CF32428A183836310024355F /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF324289183836310024355F /* FavoritesViewController.m */; };
+		CF324290183AC1A20024355F /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32428F183AC1A20024355F /* FeedTableViewController.m */; };
 		CF9DC89A1834344B00088AC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9DC8991834344B00088AC2 /* Foundation.framework */; };
 		CF9DC89C1834344B00088AC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9DC89B1834344B00088AC2 /* CoreGraphics.framework */; };
 		CF9DC89E1834344B00088AC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9DC89D1834344B00088AC2 /* UIKit.framework */; };
@@ -44,6 +45,8 @@
 		CF324286183836190024355F /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		CF324288183836310024355F /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
 		CF324289183836310024355F /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		CF32428E183AC1A20024355F /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
+		CF32428F183AC1A20024355F /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		CF9DC8961834344B00088AC2 /* AlphaTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9DC8991834344B00088AC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CF9DC89B1834344B00088AC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -135,6 +138,8 @@
 				CF324286183836190024355F /* ProfileViewController.m */,
 				CF324288183836310024355F /* FavoritesViewController.h */,
 				CF324289183836310024355F /* FavoritesViewController.m */,
+				CF32428E183AC1A20024355F /* FeedTableViewController.h */,
+				CF32428F183AC1A20024355F /* FeedTableViewController.m */,
 				CF9DC8B41834344C00088AC2 /* Images.xcassets */,
 				CF9DC8A01834344C00088AC2 /* Supporting Files */,
 			);
@@ -271,6 +276,7 @@
 				CF9DC8B31834344C00088AC2 /* ViewController.m in Sources */,
 				CF9DC8AA1834344C00088AC2 /* AppDelegate.m in Sources */,
 				CF32428A183836310024355F /* FavoritesViewController.m in Sources */,
+				CF324290183AC1A20024355F /* FeedTableViewController.m in Sources */,
 				CF324284183834760024355F /* FeedViewController.m in Sources */,
 				CF9DC8A61834344C00088AC2 /* main.m in Sources */,
 				CF324287183836190024355F /* ProfileViewController.m in Sources */,
